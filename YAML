@@ -1,0 +1,17 @@
+#YAML format as below
+
+#serverinfo.yml
+
+servers:
+
+-name: server1
+owner: ram 
+status: active 
+
+-name: server2
+owner: shyam
+status: inactive 
+
+-name: server3
+owner: sachin 
+status: active
