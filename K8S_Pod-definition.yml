@@ -18,3 +18,5 @@ spec:
 containers:
 name: nginx-container
 iamge: nginx
+
+#kubectl create -f pod-defintion.yml---- To create pod
