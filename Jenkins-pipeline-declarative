@@ -1,0 +1,31 @@
+#declarative Pipeline
+#installing nginx
+
+pipeline
+{
+agent any
+stages {
+
+stage ('build') {
+steps {
+  sh "install nginx -y"
+  sh "we are done with build stage"
+  }
+  }
+  
+  stage ('test) {
+  steps {
+    sh "systemctl start nginx"
+    sh "we are done with test satge"
+    }
+    }
+    
+    stage ('deploy){
+    steps{
+    sh "systemctl status nginx"
+    sh "we are done with deploy stage"
+    }
+    }
+    }
+    }
+    
