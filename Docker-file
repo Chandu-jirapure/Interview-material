@@ -1,0 +1,7 @@
+# go language is used for docker file
+
+FROM ubuntu
+LABEL NAME =  "OWNER NAME"
+RUN apt update -y
+RUN apt install nginx -y
+EXPOSE 80
