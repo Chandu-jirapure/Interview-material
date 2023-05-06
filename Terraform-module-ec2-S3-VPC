@@ -1,0 +1,30 @@
+provider.tf
+
+provider "aws" {
+  region = "us-east-1"
+}
+================================================================
+
+main.tf
+#EC2-Instance
+resource "aws_instance" "batch-16" {
+  ami           = "ami-007855ac798b5175e"
+  instance_type = "t2.micro"
+   tags = {
+    Name = "Devops"
+  }
+}
+
+#S3-Bucket
+resource "aws_s3_bucket" "shree-bucket" {
+  bucket = "my-tf-test-bucket-hvdvijb"
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
+
+#VPC
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
+}
