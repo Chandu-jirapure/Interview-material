@@ -1,0 +1,9 @@
+apiVersion: V1
+kind: service
+metadata:
+name: backend
+spec:
+type: cluster IP
+ports:
+target port: 80
+port: 80
